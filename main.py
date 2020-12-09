@@ -15,6 +15,9 @@ def main():
 	with open('sentiment analysis app/pickle files/tf_idf.pkl', 'rb') as f:
 		tf_idf = pickle.load(f)
 
+	with open('sentiment analysis app/pickle files/count_vectorizer.pkl', 'rb') as f:
+		count_vectorizer = pickle.load(f)
+
 	st.title('Olist User Review')
 	menu = ['Home', 'About']
 	choice = st.sidebar.selectbox('Menu', menu)
@@ -29,7 +32,7 @@ def main():
 		if st.button('Translate'):
 			st.text_area('Translated Review Text', trans_text)
 		if st.button('Get Sentiment'):
-			prediction = int(model.predict(tf_idf.transform([review])))
+			prediction = int(model.predict(count_vectorizer.transform([review])))
 			if prediction == 1:
 				st.success('**Review text is Positive :joy: :yum:**')
 			elif prediction == -1:
