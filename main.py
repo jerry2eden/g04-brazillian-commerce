@@ -1,11 +1,6 @@
 import streamlit as st
 import pickle
 from google_trans_new import google_translator
-import h5py
-import keras
-
-
-filename = "sentiment analysis app/pickle files/best_model2.hdf5"
 
 
 def main():
@@ -19,8 +14,6 @@ def main():
 		
 	with open('sentiment analysis app/pickle files/tf_idf.pkl', 'rb') as f:
 		tf_idf = pickle.load(f)
-
-	model2 = keras.models.load_model(filename)
 
 	st.title('Olist User Review')
 	menu = ['Home', 'About']
