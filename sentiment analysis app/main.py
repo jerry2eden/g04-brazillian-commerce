@@ -21,14 +21,14 @@ def main():
 		
 	with open('pickle files/tf_idf.pkl', 'rb') as f:
 		tf_idf = pickle.load(f)
-		
+
 	st.title('Olist User Review')
 	menu = ['Home', 'About']
 	choice = st.sidebar.selectbox('Menu', menu)
 
 	if choice == 'Home':
 		st.subheader('Sentiment Analysis')
-		review = st.text_area('Review Text', 'Enter your Reviews')
+		review = st.text_area('Review Text', 'Enter your Review in Portuguese')
 
 		translator = google_translator()
 		trans_text = translator.translate(text=review, lang_tgt='en')
@@ -46,6 +46,10 @@ def main():
 	if choice == 'About':
 		st.subheader('Learn More About Sentiment Analysis')
 		st.write('## Model was built using Logistic Regression :sunglasses:')
+		st.write('Model was train in **Portuguese language**')
+		st.write('For Best Performance Review should be in that language')
+		st.write('Option to translate to English is Available')
+		# st.write('If you want other language Translation')
 
 
 
