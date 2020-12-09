@@ -7,14 +7,9 @@ def main():
 	"""
 	A simple NLP app
 	"""
-
-
 	with open('sentiment analysis app/pickle files/log_reg.pkl', 'rb') as f:
 		model = pickle.load(f)
 		
-	# with open('sentiment analysis app/pickle files/tf_idf.pkl', 'rb') as f:
-	# 	tf_idf = pickle.load(f)
-
 	with open('sentiment analysis app/pickle files/tfidf_vectorizer.pkl', 'rb') as f:
 		tfidf_vectorizer = pickle.load(f)
 
