@@ -1,20 +1,12 @@
 import streamlit as st
-import spacy_streamlit
-import spacy
 import pickle
 from google_trans_new import google_translator
 
-
-def load_model():
-	model = pickle.load('log_reg.pkl')
-	tf_idf = pickle.load('tf_idf.pkl')
 
 def main():
 	"""
 	A simple NLP app
 	"""
-	# model = pickle.load(open('log_reg.pkl'))
-	# tf_idf = pickle.load(open('tf_idf.pkl'))
 
 	with open('pickle files/log_reg.pkl', 'rb') as f:
 		model = pickle.load(f)
