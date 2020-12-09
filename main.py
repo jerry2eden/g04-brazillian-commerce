@@ -9,10 +9,10 @@ def main():
 	"""
 
 
-	with open('pickle files/log_reg.pkl', 'rb') as f:
+	with open('sentiment analysis app/pickle files/log_reg.pkl', 'rb') as f:
 		model = pickle.load(f)
 		
-	with open('pickle files/tf_idf.pkl', 'rb') as f:
+	with open('sentiment analysis app/pickle files/tf_idf.pkl', 'rb') as f:
 		tf_idf = pickle.load(f)
 
 	st.title('Olist User Review')
