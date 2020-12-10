@@ -1,0 +1,2 @@
+google_trans_new==1.1.1
+streamlit==0.69.2
